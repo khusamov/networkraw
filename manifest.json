@@ -1,7 +1,7 @@
 {
-	"name": "DevTools. Network RAW view",
+	"name": "Просмотрщик текста запросов",
 	"version": "0.1",
 	"manifest_version": 2,
-	"description": "View RAW requst/response",
+	"description": "Просмотр текста запросов, отправляемых с текущей страницы.",
 	"devtools_page": "devtools.html"
 }

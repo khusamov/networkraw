@@ -15,7 +15,7 @@ Ext.define('NetworkRaw.view.main.Main', {
 
         'NetworkRaw.view.main.MainController',
         'NetworkRaw.view.main.MainModel',
-        'NetworkRaw.view.main.List'
+        'NetworkRaw.view.main.RequestList'
     ],
 
     controller: 'main',
@@ -77,10 +77,12 @@ Ext.define('NetworkRaw.view.main.Main', {
 
     items: [{
         title: 'Home',
-        iconCls: 'fa-home',
+		iconCls: 'fa-home',
+		layout: 'fit',
         // The following grid shares a store with the classic version's grid as well!
         items: [{
-            xtype: 'mainlist'
+			xtype: 'requestlist',
+			bind: '{requestListStore}'
         }]
     }, {
         title: 'Users',

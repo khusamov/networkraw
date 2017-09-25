@@ -1,0 +1,19 @@
+{
+  "description": "Просмотрщик текста запросов",
+  "name": "networkraw",
+  "version": "1.1.0",
+  "author": "Khusamov Sukhrob <khusamov@yandex.ru>",
+  "license": "ISC",
+  "main": "devtools.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd networkraw && cls && sencha app watch --port 1881",
+    "build:testing": "cd networkraw && cls && sencha app build testing",
+    "build:production": "cd networkraw && cls && sencha app build production",
+    "build": "npm run build:testing && npm run build:production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:khusamov/networkraw-chrome-extension.git"
+  }
+}

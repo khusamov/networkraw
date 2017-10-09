@@ -85,19 +85,19 @@ Ext.define('NetworkRaw.model.harEntry.Request', {
 		 * RAW
 		 */
 		name: 'raw',
-		calculate: function(request) {
-			var raw = request.method + ' ' + request.url + ' ' + 
-				((request.httpVersion === 'unknown') ? 'HTTP/1.1' : e.request.httpVersion) + '\n';
+		calculate: function(data) {
+			var raw = data.method + ' ' + data.url + ' ' + 
+				((data.httpVersion === 'unknown') ? 'HTTP/1.1' : data.httpVersion) + '\n';
 			var sHeaders = '';
-			if (request.headers.length > 0) {
-				Ext.Array.each(request.headers, function (header) {
+			if (data.headers.length > 0) {
+				Ext.Array.each(data.headers, function (header) {
 					sHeaders += header.name + ': ' + header.value + '\n';
 				});
 			}
 			raw += sHeaders;
-			if (request.bodySize > 0) {
+			if (data.bodySize > 0) {
 				raw += '\n';
-				raw += request.postData.text;
+				raw += data.postData.text;
 			}
 			return raw;
 		}

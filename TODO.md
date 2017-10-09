@@ -1,5 +1,8 @@
 
 
+Доработать http://www.softwareishard.com/blog/har-12-spec/
+https://developer.chrome.com/extensions/devtools_network
+
 Попробовать генератор расширений для хрома:
 https://github.com/yeoman/generator-chrome-extension#readme
 
